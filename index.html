@@ -32,6 +32,15 @@
             list-style: none;
             margin: 0 23px;
         }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            
+            color: rgb(153,153,226);
+            font-size: 1.02rem;
+        }
         .left {
             font-size: 1.5rem;
         }
@@ -39,27 +48,32 @@
         .firstSection{
             display: flex;
             justify-content: space-around;
-            margin: 23px 0;
+            align-items: center;
+            margin: 80px 0;
         }
 
-        .firstSection div{
+        .firstSection > div{
             width: 30%;
         }
 
         .leftSection{
-            font-size: 1.5rem;
-            
+            font-size: 2.5rem;
         }
 
-        .rightSection{
+        /* .rightSection{
             
             width: 34px;
-        }
+        } */
         .rightSection img{
             width: 80%;
-            margin: 100px 0;
         }
 
+        .purple{
+            color:rgb(170, 107, 228)
+        }
+        #element{
+            color: rgb(170, 107, 228);
+        }
     </style>
 </head>
 <body>
@@ -68,11 +82,11 @@
             <div class="left">Himanshi's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="#">Home</li></a>
+                    <li><a href="#">About</li></a>
+                    <li><a href="#">Services</li></a>
+                    <li><a href="#">Projects</li></a>
+                    <li><a href="#">Contact Me</li></a>
                 </ul>
             </div>
         </nav>
@@ -80,13 +94,25 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                Hi, My name is Himanshi Vyas
-                <div>and I am a Developer</div>
+                Hi, My name is <span class="purple">Himanshi</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
             </div>
             <div class="rightSection">
                 <img src="dev.jpeg" alt="image">
             </div>
         </section>
+        <section class="secondSection">
+            
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+        strings: ['Backend Developer', 'Solidity Developer'],
+        typeSpeed: 50,
+        });
+    </script>
 </body>
 </html>
